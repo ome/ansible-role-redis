@@ -7,7 +7,7 @@
     key: https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-9
   when: ansible_os_family == 'RedHat'
 
-- name: epel | setup dnf repository
+- name: Setup dnf repository, epel
   become: true
   ansible.builtin.dnf:
     update_cache: true
