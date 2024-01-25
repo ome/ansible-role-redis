@@ -4,11 +4,14 @@ galaxy_info:
   description: Install Redis
   company: Open Microscopy Environment
   license: BSD
-  min_ansible_version: 2.1
+  min_ansible_version: 2.10
   platforms:
     - name: EL
       versions:
         - 9
+    - name: Ubuntu
+      versions:
+        - jammy
   namespace: ome
   role_name: redis
   galaxy_tags: []
