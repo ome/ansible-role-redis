@@ -27,6 +27,7 @@
   become: true
   ansible.builtin.apt:
     update_cache: true
+    cache_valid_time: 86400
     name: redis
     state: present
   when: ansible_os_family == 'Debian'
@@ -45,7 +46,7 @@
 
 - name: set redis to start on startup
   become: true
-  service:
+  ansible.builtin.service:
     name: redis
     state: started
     enabled: true
