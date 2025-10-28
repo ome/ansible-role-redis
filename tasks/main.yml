@@ -36,7 +36,7 @@
 # does not exist
 - name: configure redis for RHEL
   become: true
-  lineinfile:
+  ansible.builtin.lineinfile:
     dest: /etc/redis/redis.conf
     line: "bind {{ redis_listen | default('127.0.0.1') }}"
     regexp: "^bind\\s.*"
